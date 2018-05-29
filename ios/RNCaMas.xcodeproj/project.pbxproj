@@ -27,7 +27,6 @@
 		134814201AA4EA6300B7C361 /* libRNCaMas.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNCaMas.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		340C622C1FB632F400C5318D /* RNCaMasUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNCaMasUser.h; sourceTree = "<group>"; };
 		340C622D1FB632F400C5318D /* RNCaMasUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNCaMasUser.m; sourceTree = "<group>"; };
-		340C62381FB631B600C5318D /* frameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; path = frameworks; sourceTree = "<group>"; };
 		B3E7B5881CC2AC0600A0062D /* RNCaMas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNCaMas.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* RNCaMas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNCaMas.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -54,7 +53,6 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-				340C62381FB631B600C5318D /* frameworks */,
 				340C622C1FB632F400C5318D /* RNCaMasUser.h */,
 				340C622D1FB632F400C5318D /* RNCaMasUser.m */,
 				B3E7B5881CC2AC0600A0062D /* RNCaMas.h */,
@@ -211,12 +209,13 @@
 		58B511F01A9E6C8500147676 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = ./frameworks;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
+					"$(SRCROOT)/../../../ios/Pods/**",
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
@@ -228,12 +227,13 @@
 		58B511F11A9E6C8500147676 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = ./frameworks;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
+					"$(SRCROOT)/../../../ios/Pods",
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
